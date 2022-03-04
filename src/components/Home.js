@@ -20,10 +20,7 @@ function Home(props) {
      
   <Paper component={Box} sx={{width:'50%',marginLeft:'25%'}}>
 
-
-  
-
-         <Carousel variant="dark">
+  {recivedData.finalData.products.length !==0 && <Carousel variant="dark">
           {recivedData.finalData.products && recivedData.finalData.products.map((ele,index)=>{
             return <Carousel.Item key={index}>
             <img
@@ -40,6 +37,7 @@ function Home(props) {
           </Carousel.Item>
           })}
           </Carousel>
+}
          </Paper>
 
     </div>
